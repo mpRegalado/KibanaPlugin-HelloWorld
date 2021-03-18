@@ -3,15 +3,10 @@ import { BrowserRouter, Router, RouteComponentProps, Switch, Route, Redirect } f
 import Greeting from './greeting'
 
 import {
-  EuiButton,
   EuiPage,
   EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
   EuiPageHeader,
   EuiTitle,
-  EuiText,
 } from '@elastic/eui';
 
 import { CoreStart } from '../../../../src/core/public';
@@ -28,9 +23,6 @@ interface HelloWorldAppDeps {
 }
 
 export const HelloWorldApp = ({ basename, notifications, http, navigation, history }: HelloWorldAppDeps) => {
-  const onClickHandler = () => {
-    notifications.toasts.addSuccess("Bye!");
-  };
   // Render the application DOM.
   // Note that `navigation.ui.TopNavMenu` is a stateful component exported on the `navigation` plugin's start contract.
   return (

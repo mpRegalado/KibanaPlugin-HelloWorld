@@ -1,4 +1,3 @@
-import { i18n } from '@kbn/i18n';
 import { AppMountParameters, CoreSetup, CoreStart, Plugin } from '../../../src/core/public';
 import { HelloWorldPluginSetup, HelloWorldPluginStart, AppPluginStartDependencies } from './types';
 import { PLUGIN_NAME } from '../common';
@@ -22,12 +21,7 @@ export class HelloWorldPlugin implements Plugin<HelloWorldPluginSetup, HelloWorl
     // Return methods that should be available to other plugins
     return {
       getGreeting() {
-        return i18n.translate('helloWorld.greetingText', {
-          defaultMessage: 'Hello from {name}!',
-          values: {
-            name: PLUGIN_NAME,
-          },
-        });
+        return "Hello World!"
       },
     };
   }
