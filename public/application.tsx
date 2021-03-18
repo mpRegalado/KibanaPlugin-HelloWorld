@@ -7,7 +7,7 @@ import { HelloWorldApp } from './components/app';
 export const renderApp = (
   { notifications, http }: CoreStart,
   { navigation }: AppPluginStartDependencies,
-  { appBasePath, element }: AppMountParameters
+  { appBasePath, element, history }: AppMountParameters
 ) => {
   ReactDOM.render(
     <HelloWorldApp
@@ -15,6 +15,7 @@ export const renderApp = (
       notifications={notifications}
       http={http}
       navigation={navigation}
+      history={history}
     />,
     element
   );
