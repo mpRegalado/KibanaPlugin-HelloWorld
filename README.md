@@ -1,6 +1,7 @@
 # helloWorld
 
-A Kibana plugin
+A Kibana plugin made to practice creating plugins in Kibana.
+It shows an app with two pages in two different routes, one saying Hello and one saying Goodbye
 
 ---
 
